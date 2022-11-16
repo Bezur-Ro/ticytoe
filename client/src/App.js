@@ -1,28 +1,27 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import './App.css';
-import {BrowserRouter as Router,
-        Switch,
-        Route,
-        Link} from 'react-router-dom';
-import Landing from './components/landing';
-import CreateSession from './components/createSession';
-import JoinSession from './components/joinSession';
-import Lobby from './components/Lobby';
-import {motion,AnimatePresence} from 'framer-motion';
-import Container from './components/Container';
-import Stats from './components/Stats';
+import Board from "./components/Board/Board";
+import Join from "./components/Join/Join";
+import Footer from "./Footer";
 
-//text selection: shift + left/right keys
-//block moving: ctrl + [/]
+import styles from "./App.module.css";
 
 function App() {
-  
-  
-
   return (
-    
-    <Container/>
+    <BrowserRouter>
+      <div className={styles.outerContainer}>
+        <div className={styles.innerContainer}>
+          <div className="d-flex flex-row justify-content-center align-items-center">
+            <img src="./img/logo.png" alt="" height="60px" />
+            <h1 className={styles.title}>&nbsp;TaTeTi.io</h1>
+          </div>
+          <Route path="/" exact component={Join} />
+          <Route path="/game" component={Board} />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

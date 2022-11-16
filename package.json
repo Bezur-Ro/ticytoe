@@ -1,23 +1,20 @@
 {
-  "name": "o-tic-tac-toe",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Full Stack web-app where any two people on the web can challenge each other to a classic game of tic-tac-toe.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    
-    "start": "node server.js"
+    "start": "node index.js"
   },
-  "author": "Imon Kallyan Tatar",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http": "0.0.1-security",
     "nodemon": "^2.0.4",
-    "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0"
+    "socket.io": "^2.3.0"
   }
 }
