@@ -46,7 +46,7 @@ $(function() {
         } else {
             setTurn(turn);
         }
-        $("#status").text(user == 'spectator' ?  'You are a spectator' : 'You are player ' + user);
+        $("#status").text(user == 'spectator' ?  'spectating' : 'You are ' + user);
 
     }
 
